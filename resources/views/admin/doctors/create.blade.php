@@ -1,0 +1,114 @@
+@extends('admin/layouts.master')
+@section('content-header')
+
+    <h1>
+    Dashboard
+    <small>Statistics Overview</small>
+  </h1>
+  <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+      <li class="active">Doctors</li>
+  </ol>
+
+@endsection
+
+
+@section('content')
+    <h1>Add New Doctors</h1>
+    <div class="row">
+      <div class="box box-info">
+          <div class="box-header with-border" style="text-align: -webkit-center">
+            <h2 class="box-title">Add New Doctor</h2>
+          </div>
+          <!-- /.box-header -->
+          <!-- form start -->
+          <div class="col-md-8 col-md-offset-2">
+          <form class="form-horizontal">
+            <div class="box-body">
+              <div class="form-group">
+                <label for="inputName3" class="col-sm-2 control-label">Doctor Name</label>
+
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputName3" placeholder="Doctor Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password Confirmation</label>
+
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password Confirmation" name="password_confirmation" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Degree</label>
+
+                <div class="col-sm-10">
+                  <select class="form-control" name="degree">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Address</label>
+
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="exampleInputAddress" placeholder="Address" name="address" required>
+
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">BirthDay</label>
+
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" name="birth_day" required>
+
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Doctor Phone</label>
+
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="phone" required>
+
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Upload Photo</label>
+
+                <div class="col-sm-10">
+                  <input type="file" id="exampleInputFile" name="photo" required />
+
+                </div>
+              </div>
+            <!-- /.box-body -->
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Add Doctor</label>
+
+              <div class="col-sm-10">
+                <input ttype="submit" class="btn btn-info" class="form-control" Value = "Save"/>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        </div>
+    </div>
+@endsection
