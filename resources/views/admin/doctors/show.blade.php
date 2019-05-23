@@ -16,7 +16,7 @@
 
 @section('content')
 
-    @if(isset($student))
+    @if(isset($doctor))
     <div class="row panel panel-success" style="margin-top:2%;">
     <div class="panel-heading lead">
         <div class="row">
@@ -24,9 +24,9 @@
             <div class="col-lg-4 col-md-4 text-right">
                 <div class="btn-group text-center">
 
-                  <a href="/students/edit/{{$student->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit Student">
+                  <a href="/students/edit/{{$doctor->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit Student">
                     <i class="fa fa-edit fa-1x"></i></a>
-                  <a href="/students/delete/{{$student->id}}"class="btn btn-danger" onclick="if(!confirm('Do you want delete this Student')) return false;" data-toggle="tooltip" data-placement="top" title="Delete Student">
+                  <a href="/students/delete/{{$doctor->id}}"class="btn btn-danger" onclick="if(!confirm('Do you want delete this Student')) return false;" data-toggle="tooltip" data-placement="top" title="Delete Student">
                     <i class="fa fa-trash-o fa-1x"></i></a>
                 </div>
             </div>
@@ -36,7 +36,7 @@
         <div class="row">
           <div class="col-md-3">
             <div class="text-center">
-           <img src="/image/upload/students/{{$student->photo}}" class="img-thumbnail" alt="...">
+           <img src="/image/upload/doctors/{{$doctor->photo}}" class="img-thumbnail" alt="...">
             </div>
         </div>
             <div class="col-lg-9 col-md-9">
@@ -52,38 +52,43 @@
                                         <tbody>
                                         <tr>
                                             <td class="text-success"><i class="fa fa-user"></i>
-                                                Student Name </td>
-                                            <td>{{$student->name}}</td>
+                                                Doctor Name </td>
+                                            <td>{{$doctor->name}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-success"><i class="fa fa-envelope"></i>
                                                 Email Address</td>
-                                            <td>{{$student->email}}</td>
+                                            <td>{{$doctor->email}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-success"><i class="fa fa-envelope"></i>
+                                                Degree</td>
+                                            <td>{{$doctor->degree}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-success"><i class="fa fa-address-book">
                                                 </i> Address</td>
-                                            <td>{{$student->address}}</td>
+                                            <td>{{$doctor->address}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-success"><i class="fa fa-calendar"></i>
                                                 Birthday</td>
-                                            <td>{{$student->birthday}}</td>
+                                            <td>{{$doctor->birthday}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-success"><i class="fa fa-phone"></i>
                                                 Phone Number</td>
-                                            <td>{{$student->phone}}</td>
+                                            <td>{{$doctor->phone}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-success"><i class="fa fa-clock-o"></i>
                                                 Time Register</td>
-                                            <td>{{$student->created_at}}</td>
+                                            <td>{{$doctor->created_at}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-success"><i class="fa fa-clock-o"></i>
                                                 Last Update</td>
-                                            <td>{{$student->updated_at}}</td>
+                                            <td>{{$doctor->updated_at}}</td>
                                         </tr>
                                         </tbody>
                                     </table>

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use App\Doctor;
-class DoctorCreateRequest extends FormRequest
+class DoctorEditRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,34 +26,37 @@ class DoctorCreateRequest extends FormRequest
         return [
           'name'  => 'required',
           'email'  => 'required|email',
-          'password'  => 'required|confirmed',
           'degree'  => 'required',
           'address'  => 'required',
           'birth_day'  => 'required',
           'phone'  => 'required',
-          'photo'  => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+
         ];
     }
-    public function persist()
+    public function persist($id)
     {
-      $fileName = null;
+      $doctor = Doctor::find($id);
+      $fileName = $doctor->photo;
       if (request()->hasFile('photo'))
       {
         $file = request()->file('photo');
         $fileName = md5($file->getClientOriginalName() . time()) . "." . $file->getClientOriginalExtension();
         $file->move('./image/upload/doctors/', $fileName);
       }
-      $doctor = Doctor::create([
-        'name' => request('name'),
-        'email' => request('email'),
-        'password' => bcrypt(request('password')),
-        'address' => request('address'),
-        'degree' => request('degree'),
-        'birthday' => request('birth_day'),
-        'phone' => request('phone'),
-        'photo' => $fileName,
-      ]);
+      $doctor->name=request('name');
+      $doctor->email=request('email');
+      $doctor->degree=request('degree');
+      if ((request('new_password') && request('password_confirmation')) && (request('new_password') === request('password_confirmation')))
 
-      return $doctor;
+      {
+          $doctor->password=bcrypt(request('new_password'));
+      }
+
+      $doctor->address=request('address');
+      $doctor->birthday=request('birth_day');
+      $doctor->phone=request('phone');
+      $doctor->photo=$fileName;
+
+      $doctor->save();
     }
 }

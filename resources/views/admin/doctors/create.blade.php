@@ -23,34 +23,35 @@
           <!-- /.box-header -->
           <!-- form start -->
           <div class="col-md-8 col-md-offset-2">
-          <form class="form-horizontal">
+          <form class="form-horizontal" method="POST" action="/doctors" enctype="multipart/form-data">
+              {{ csrf_field() }}
             <div class="box-body">
               <div class="form-group">
                 <label for="inputName3" class="col-sm-2 control-label">Doctor Name</label>
 
                 <div class="col-sm-10">
-                  <input type="email" class="form-control" id="inputName3" placeholder="Doctor Name">
+                  <input type="text" class="form-control" id="inputName3" name="name" placeholder="Doctor Name" required>
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 
                 <div class="col-sm-10">
-                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                  <input type="email" class="form-control" id="inputEmail3" name="email"  placeholder="Email" required>
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
 
                 <div class="col-sm-10">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                  <input type="password" class="form-control" id="inputPassword3" name="password"  placeholder="Password" required>
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputPassword3" class="col-sm-2 control-label">Password Confirmation</label>
 
                 <div class="col-sm-10">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password Confirmation" name="password_confirmation" required>
+                  <input type="password" class="form-control" id="inputPassword3" name="password_confirmation" placeholder="Password Confirmation" required>
                 </div>
               </div>
               <div class="form-group">
@@ -58,11 +59,11 @@
 
                 <div class="col-sm-10">
                   <select class="form-control" name="degree">
-                    <option>option 1</option>
-                    <option>option 2</option>
-                    <option>option 3</option>
-                    <option>option 4</option>
-                    <option>option 5</option>
+                    <option>Professor Dr</option>
+                    <option>Doctor</option>
+                    <option>Assistant Professor</option>
+                    <option>Teaching Assistant</option>
+
                   </select>
                 </div>
               </div>
@@ -103,10 +104,10 @@
               <label for="inputPassword3" class="col-sm-2 control-label">Add Doctor</label>
 
               <div class="col-sm-10">
-                <input ttype="submit" class="btn btn-info" class="form-control" Value = "Save"/>
+                <input type="submit" class="btn btn-info" class="form-control" Value = "Save"/>
               </div>
             </div>
-
+            @include('admin/layouts.errors')
           </form>
         </div>
         </div>

@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Repositories;
-use App\Student;
+use App\Doctor;
 
 /**
  *
  */
-interface StudentRepositoryInterface
+interface DoctorRepositoryInterface
 {
   /*
   Get's all from db
@@ -16,7 +16,7 @@ interface StudentRepositoryInterface
   /*
   Get's a data by ID from db
   */
-  public function show(Student $student);
+  public function show(Doctor $doctor);
 
   /*
   edit data by ID from db

@@ -26,3 +26,8 @@ Route::get('/students/delete/{id}','StudentsController@destroy');
 // Doctor Route
 Route::get('/doctors','DoctorsController@index');
 Route::get('/doctors/create','DoctorsController@create');
+Route::post('/doctors','DoctorsController@store');
+Route::get('/doctors/{doctor}','DoctorsController@show');
+Route::get('/doctors/edit/{id}','DoctorsController@edit');
+Route::post('/doctors/update/{id}','DoctorsController@update');
+Route::get('/doctors/delete/{id}','DoctorsController@destroy');
