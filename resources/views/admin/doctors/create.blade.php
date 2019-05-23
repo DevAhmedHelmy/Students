@@ -7,7 +7,8 @@
   </h1>
   <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-      <li class="active">Doctors</li>
+      <li><a href="/doctors"><i class="fa fa-dashboard"></i> Doctors</a></li>
+      <li class="active"><i class="fa fa-plus"></i> Add New Doctors</li>
   </ol>
 
 @endsection

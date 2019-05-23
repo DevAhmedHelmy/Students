@@ -8,7 +8,7 @@
 <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
     <li><a href="#"><i class="fa fa-users"></i> Students</a></li>
-    <li class="active">Show Students</li>
+    <li class="active"><i class="fa fa-eye"></i> Show Students</li>
 </ol>
 
 @endsection
@@ -24,9 +24,9 @@
             <div class="col-lg-4 col-md-4 text-right">
                 <div class="btn-group text-center">
 
-                  <a href="/students/edit/{{$doctor->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit Student">
+                  <a href="/doctors/edit/{{$doctor->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit Student">
                     <i class="fa fa-edit fa-1x"></i></a>
-                  <a href="/students/delete/{{$doctor->id}}"class="btn btn-danger" onclick="if(!confirm('Do you want delete this Student')) return false;" data-toggle="tooltip" data-placement="top" title="Delete Student">
+                  <a href="/doctors/delete/{{$doctor->id}}"class="btn btn-danger" onclick="if(!confirm('Do you want delete this Student')) return false;" data-toggle="tooltip" data-placement="top" title="Delete Student">
                     <i class="fa fa-trash-o fa-1x"></i></a>
                 </div>
             </div>
