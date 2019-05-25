@@ -15,5 +15,8 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(DoctorRepositoryInterface::class, function(){
           return new DoctorRepository();
         });
+        $this->app->bind(OutlayRepositoryInterface::class, function(){
+          return new OutlayRepository();
+        });
     }
 }

@@ -3,17 +3,15 @@
 namespace App;
 
 use App\Lecture;
-use App\Subject;
-
-class Doctor extends Model
+class Subject extends Model
 {
     public function lectures()
     {
     	return $this->hasMany(Lecture::class);
     }
 
-    public function subjects()
+    public function doctor()
     {
-    	return $this->hasMany(Subject::class);
+    	return $this->belongsTo(Doctor::class);
     }
 }

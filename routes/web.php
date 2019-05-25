@@ -31,3 +31,13 @@ Route::get('/doctors/{doctor}','DoctorsController@show');
 Route::get('/doctors/edit/{id}','DoctorsController@edit');
 Route::post('/doctors/update/{id}','DoctorsController@update');
 Route::get('/doctors/delete/{id}','DoctorsController@destroy');
+
+
+// Outlay Route
+Route::get('/outlay', 'OutlayController@index');
+Route::get('/outlay/create', 'OutlayController@create');
+Route::post('/outlay', 'OutlayController@store');
+Route::get('/outlay/{id}','OutlayController@show');
+Route::get('/outlay/edit/{id}','OutlayController@edit');
+Route::post('/outlay/update/{id}','OutlayController@update');
+Route::get('/outlay/delete/{id}','OutlayController@destroy');
