@@ -18,5 +18,12 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(OutlayRepositoryInterface::class, function(){
           return new OutlayRepository();
         });
+        $this->app->bind(SubjectRepositoryInterface::class, function(){
+          return new SubjectRepository();
+        });
+        $this->app->bind(LectureRepositoryInterface::class, function(){
+          return new LectureRepository();
+        });
+
     }
 }

@@ -7,8 +7,8 @@
 </h1>
 <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-    <li><a href="#"><i class="fa fa-users"></i> Students</a></li>
-    <li class="active">Show Students</li>
+    <li><a href="/students"><i class="fa fa-graduation-cap"></i> Students</a></li>
+    <li class="active"><i class="fa fa-eye"></i> Show Students</li>
 </ol>
 
 @endsection
@@ -20,7 +20,8 @@
     <div class="row panel panel-success" style="margin-top:2%;">
     <div class="panel-heading lead">
         <div class="row">
-            <div class="col-lg-8 col-md-8"><i class="fa fa-users"></i> View Student Details</div>
+            <div class="col-lg-8 col-md-8"><i class="fa fa-users"></i> View Student Details </div>
+            
             <div class="col-lg-4 col-md-4 text-right">
                 <div class="btn-group text-center">
 

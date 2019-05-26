@@ -5,7 +5,7 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <!-- CSRF Token -->
             <meta name="csrf-token" content="{{ csrf_token() }}">
-            <title>AdminLTE 2 | Starter</title>
+            <title>Student Register</title>
             <!-- Tell the browser to be responsive to screen width -->
             <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
             <!-- Styles -->
@@ -37,14 +37,7 @@
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <!-- <h1>
-                    Members
-                    <small>Show All Members</small>
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                    <li class="active">Members</li>
-                </ol> -->
+               
                 @yield('content-header')
 
             </section>

@@ -1,3 +1,4 @@
+
 @extends('admin/layouts.master')
 @section('content-header')
 
@@ -7,7 +8,8 @@
   </h1>
   <ol class="breadcrumb">
       <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-      <li class="active"><i class="fa fa-money"></i> Outlay</li>
+      <li><a href="/lectures"><i class="fa fa-book"></i> Lecture</a></li>
+      <li class="active"><i class="fa fa-plus"></i> Add New Lecture</li>
   </ol>
 
 @endsection
@@ -24,19 +26,29 @@
             <!-- /.box-header -->
             <!-- form start -->
             <div class="col-md-6 col-md-offset-3">
-            <form role="form" action="/outlay" method="POST">
+            <form role="form" action="/lectures" method="POST">
             	{{ csrf_field() }}
               <div class="box-body">
                 <div class="form-group">
-                  <label>Outlay</label>
-                  <input type="number" class="form-control" name="outlay" required>
+                <label>Subject Name</label>
+                <select class="form-control" name="subject_id">
+                  @if(isset($subjects))
+                    @foreach($subjects as $subject)
+                        <option value="{{$subject->id}}">{{$subject->name}}</option>
+                      @endforeach
+                    @endif
+                </select>
+              </div>
+                <div class="form-group">
+                  <label>Lecture Time</label>
+                  <input type="time" class="form-control" name="lecture_time" required>
                 </div>
                 <div class="form-group">
-                <label>Student Name</label>
-                <select class="form-control" name="student_id">
-                	@if(isset($students))
-	                	@foreach($students as $student)
-	                    	<option value="{{$student->id}}">{{$student->name}}</option>
+                <label>Doctor Name</label>
+                <select class="form-control" name="doctor_id">
+                	@if(isset($doctors))
+	                	@foreach($doctors as $doctor)
+	                    	<option value="{{$doctor->id}}">{{$doctor->name}}</option>
 	                    @endforeach
                     @endif
                 </select>

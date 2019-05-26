@@ -1,3 +1,4 @@
+
 @extends('admin/layouts.master')
 @section('content-header')
 
@@ -7,7 +8,8 @@
   </h1>
   <ol class="breadcrumb">
       <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-      <li class="active"><i class="fa fa-money"></i> Outlay</li>
+      <li><a href="/subjects"><i class="fa fa-book"></i> Subjects</a></li>
+      <li class="active"><i class="fa fa-edit"></i> Edit Subject</li>
   </ol>
 
 @endsection
@@ -23,20 +25,22 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
+            @if(isset($subject))
             <div class="col-md-6 col-md-offset-3">
-            <form role="form" action="/outlay" method="POST">
+            <form role="form" action="/subjects/update/{{$subject->id}}" method="POST">
             	{{ csrf_field() }}
               <div class="box-body">
                 <div class="form-group">
-                  <label>Outlay</label>
-                  <input type="number" class="form-control" name="outlay" required>
+                  <label>Subject Name</label>
+                  <input type="text" class="form-control" name="name" required value="{{$subject->name}}">
                 </div>
                 <div class="form-group">
                 <label>Student Name</label>
-                <select class="form-control" name="student_id">
-                	@if(isset($students))
-	                	@foreach($students as $student)
-	                    	<option value="{{$student->id}}">{{$student->name}}</option>
+                <select class="form-control" name="doctor_id">
+                  <option value="{{$subject->doctor->id}}">{{$subject->doctor->name}}</option>
+                	@if(isset($doctors))
+	                	@foreach($doctors as $doctor)
+	                    	<option value="{{$doctor->id}}">{{$doctor->name}}</option>
 	                    @endforeach
                     @endif
                 </select>
@@ -49,6 +53,7 @@
               @include('admin/layouts.errors')
             </form>
           </div>
+          @endif
 </div>
 @endsection
 

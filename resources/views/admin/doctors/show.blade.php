@@ -6,9 +6,9 @@
     <small>Statistics Overview</small>
 </h1>
 <ol class="breadcrumb">
-    <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-    <li><a href="#"><i class="fa fa-users"></i> Students</a></li>
-    <li class="active"><i class="fa fa-eye"></i> Show Students</li>
+    <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+    <li><a href="/doctors"><i class="fa fa-users"></i> Doctors</a></li>
+    <li class="active"><i class="fa fa-eye"></i> Show Doctors</li>
 </ol>
 
 @endsection

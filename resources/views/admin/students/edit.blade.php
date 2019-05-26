@@ -6,8 +6,9 @@
     <small>Add New Student</small>
   </h1>
     <ol class="breadcrumb">
-        <li><a href="/students"><i class="fa fa-dashboard"></i> Students</a></li>
-        <li class="active">Edit Student</li>
+      <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="/students"><i class="fa fa-graduation-cap"></i> Students</a></li>
+        <li class="active"><i class="fa fa-edit"></i> Edit Student</li>
     </ol>
 
 @endsection

@@ -14,4 +14,8 @@ class Subject extends Model
     {
     	return $this->belongsTo(Doctor::class);
     }
+    public function students()
+    {
+    	return $this->belongsToMany(Student::class);
+    }
 }

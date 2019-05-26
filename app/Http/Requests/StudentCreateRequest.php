@@ -3,7 +3,10 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Input;
 use App\Student;
+
+
 class StudentCreateRequest extends FormRequest
 {
     /**
@@ -52,11 +55,9 @@ class StudentCreateRequest extends FormRequest
             'birthday' => request('birth_day'),
             'phone' => request('phone'),
             'photo' => $fileName
-
-
         ]);
-
-
+        
+        
         return $student;
     }
 }

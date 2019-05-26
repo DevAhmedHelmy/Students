@@ -195,11 +195,11 @@
                     <!-- Optionally, you can add icons to the links -->
                     <li class="active"><a href="/"><i class="fa fa-dashboard"></i> <span>Home</span></a>
                     </li>
-                    <li><a href="/students"><i class="fa fa-users"></i> <span>Students</span></a></li>
+                    <li><a href="/students"><i class="fa fa-graduation-cap"></i> <span>Students</span></a></li>
                     <li><a href="/doctors"><i class="fa fa-paw"></i> <span>Doctors</span></a></li>
-                    <li><a href="/subjects"><i class="fa fa-tags"></i> <span>Subjects</span></a></li>
-                    <li><a href="/lecture"><i class="fa fa-comment"></i> <span>Lecture</span></a></li>
-                    <li><a href="/outlay"><i class="fa fa-comment"></i> <span>Outlay</span></a></li>
+                    <li><a href="/subjects"><i class="fa fa-book"></i> <span>Subjects</span></a></li>
+                    <li><a href="/lectures"><i class="fa fa-book"></i> <span>Lecture</span></a></li>
+                    <li><a href="/outlay"><i class="fa fa-money"></i> <span>Outlay</span></a></li>
 
                 </ul>
                 <!-- /.sidebar-menu -->

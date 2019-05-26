@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@index');
 // students Route
 Route::get('/students','StudentsController@index');
 Route::get('/students/create','StudentsController@create');
@@ -41,3 +39,23 @@ Route::get('/outlay/{id}','OutlayController@show');
 Route::get('/outlay/edit/{id}','OutlayController@edit');
 Route::post('/outlay/update/{id}','OutlayController@update');
 Route::get('/outlay/delete/{id}','OutlayController@destroy');
+
+
+// Subjects Route
+Route::get('/subjects', 'SubjectController@index');
+Route::get('/subjects/create', 'SubjectController@create');
+Route::post('/subjects', 'SubjectController@store');
+Route::get('/subjects/{id}','SubjectController@show');
+Route::get('/subjects/edit/{id}','SubjectController@edit');
+Route::post('/subjects/update/{id}','SubjectController@update');
+Route::get('/subjects/delete/{id}','SubjectController@destroy');
+
+
+// Lectures Route
+Route::get('/lectures', 'LectureController@index');
+Route::get('/lectures/create', 'LectureController@create');
+Route::post('/lectures', 'LectureController@store');
+Route::get('/lectures/{id}','LectureController@show');
+Route::get('/lectures/edit/{id}','LectureController@edit');
+Route::post('/lectures/update/{id}','LectureController@update');
+Route::get('/lectures/delete/{id}','LectureController@destroy');

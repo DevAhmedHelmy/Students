@@ -6,7 +6,7 @@
     <small>Statistics Overview</small>
   </h1>
   <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+      <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
       <li><a href="/doctors">Doctors</a></li>
       <li class="active"><i class="fa fa-edit"></i> Edit Doctor</li>
   </ol>

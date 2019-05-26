@@ -6,8 +6,8 @@
     <small>Statistics Overview</small>
   </h1>
   <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-      <li class="active">Students</li>
+      <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+      <li class="active"><i class="fa fa-graduation-cap"></i> Students</li>
   </ol>
 
 @endsection
@@ -22,7 +22,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Responsive Hover Table</h3>
+              <h3 class="box-title"></h3>
 
               <div class="box-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">

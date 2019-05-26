@@ -51,4 +51,9 @@ class StudentsController extends Controller
       return redirect('/students');
     }
 
+    // @foreach($student->subjects as $subject)
+
+    //             <div>{{$subject->name}}</div>
+    //         @endforeach
+
 }

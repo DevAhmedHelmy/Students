@@ -16,7 +16,7 @@ class CreateLecturesTable extends Migration
         Schema::create('lectures', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name');
+            $table->time('lecture_time');
             $table->integer('doctor_id')->unsigned();
             $table->integer('subject_id')->unsigned();
             $table->timestamps();

@@ -6,7 +6,8 @@
     <small>Add New Student</small>
   </h1>
     <ol class="breadcrumb">
-        <li><a href="/students"><i class="fa fa-dashboard"></i> Students</a></li>
+      <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="/students"><i class="fa fa-graduation-cap"></i> Students</a></li>
         <li class="active">Add New Student</li>
     </ol>
 
@@ -54,6 +55,21 @@
                   <label>Student phone:</label>
                   <input type="text" class="form-control" name="phone" required>
 
+                </div>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="subject[]" value="1">
+                      Arabic
+                    </label>
+                  </div>
+
+                  <div class="checkbox" name>
+                    <label>
+                      <input type="checkbox" name="subject[]" value="2">
+                      English
+                    </label>
+                  </div>
                 </div>
             <div class="form-group">
               <label for="exampleInputFile">Upload Photo</label>
